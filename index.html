@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Janala</title>
+  <!-- daisyUI cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font awesome links -->
+   <script src="https://kit.fontawesome.com/e8731517e3.js" crossorigin="anonymous"></script>
+  <!-- customize configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            btnBackground: '#422AD5',
+            textColor: '#00BCFF',
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body class="">
+  <!-- navbar -->
+  <nav class="pt-5 border-b border-gray-300 pb-5 bg-slate-100">
+    <section class="flex justify-between mx-10">
+      <!-- logo leftside -->
+      <div class="flex items-center">
+        <h1 class="font-bold text-2xl">English</h1>
+        <img src="assets/logo.png" alt="">
+        <h1 class="font-bold text-xl">জানালা</h1>
+      </div>
+      <!-- button rightside -->
+      <div class="flex gap-5 items-center justify-center">
+        <div class="btn border-btnBackground bg-white font-bold text-btnBackground rounded-sm">
+          <img class="" src="assets/fa-circle-question.png" alt="">
+          <h1>FAQ</h1>
+        </div>
+        <div class="btn border-btnBackground bg-white font-bold text-btnBackground rounded-sm">
+          <img class="" src="assets/fa-book-open.png" alt="">
+          <h1>Learn</h1>
+        </div>
+        <div class="btn border-btnBackground bg-white font-bold text-btnBackground rounded-sm">
+          <img class="" src="assets/fa-arrow-right-from-bracket.png" alt="">
+          <h1>Logout</h1>
+        </div>
+      </div>
+    </section>
+  </nav>
+  <!-- banner -->
+  <header class="mx-10 hidden">
+    <section class="flex items-center justify-center gap-20 ">
+      <!-- leftside -->
+       <div class="w-2/3">
+          <h1 class="text-4xl font-bold mb-2"><span class="text-textColor">English</span> is Easy!!</h1>
+          <h3 class="font-bold text-slate-500 mb-6">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</h3>
+          <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full max-w-xs rounded-sm mb-3" /><br>
+          <input type="password" placeholder="Password" class="input input-bordered w-full max-w-xs rounded-sm mb-4" /><br>
+          <button class="btn text-white bg-btnBackground hover:bg-slate-500">Get Started</button>
+       </div>
+      <!-- rightside -->
+       <div>
+          <img class="w-full" src="assets/hero-student.png" alt="">
+       </div>
+    </section>
+  </header>
+  <!-- main -->
+  <main>
+    <section class="">
+      <!-- Let's Learn Vocabularies section -->
+      <h1 class="text-3xl font-bold text-center mt-10"><span class="text-textColor">Let's</span> Learn Vocabularies</h1>
+      <!-- Lession buttons -->
+      <div id="lession-btn-container" class="text-center mt-5 mb-5 flex gap-2 justify-center">
+        <!-- Inside buttons using JS script create dynamic buttons -->
+        
+      </div>
+      <div id="lession-words-container" class="text-center mt-5 mb-5 grid grid-cols-3 gap-2 mx-10">
+        <!-- Inside buttons using JS script create dynamic words -->
+        
+      </div>
+    </section>
+    <section id="lessonFound" class="bg-slate-50 mx-10 rounded-lg p-10 text-center mt-10 ">
+      <!-- lession select -->
+       <h1 class="text-3xl"><span class="text-sm text-gray-500">আপনি এখনো কোন Lesson Select করেন নি</span><br><span class="text-2xl">একটি</span> Lesson Select <span class="text-2xl">করুন।</span></h1>
+    </section>
+    <!-- no lesson found -->
+    <section id="noLessonFound" class="bg-slate-50 mx-10 rounded-lg p-10 text-center mt-10 hidden">
+      <img class="mx-auto" src="assets/alert-error.png" alt="">
+       <h1 class="text-3xl"><span class="text-sm text-gray-500">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</span><br><span class="text-2xl">নেক্সট</span> Lesson <span class="text-2xl">এ যান</span></h1>
+    </section>
+    <!-- ask questions -->
+    <section class="mb-10 hidden">
+      <h1 class="text-center mt-14 font-bold text-3xl mb-10"><span class="text-textColor">Frequently</span> Asked Questions</h1>
+      <div class="mx-10 flex flex-col gap-4">
+        <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border">
+          <div class="collapse-title text-md font-md font-bold">1. How can I start learning English on this website?</div>
+          <div class="collapse-content text-sm">
+            <p>You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer structured courses to guide you step by step.</p>
+          </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border">
+          <div class="collapse-title text-md font-md font-bold">2. Is this website free to use?</div>
+          <div class="collapse-content text-sm">
+            <p> You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer structured courses to guide you step by step.</p>
+          </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border">
+          <div class="collapse-title text-md font-md font-bold">3. Do I need to create an account?</div>
+          <div class="collapse-content text-sm">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, quia.</p>
+          </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border">
+          <div class="collapse-title text-md font-md font-bold">4. How can I build my English vocabulary?</div>
+          <div class="collapse-content text-sm">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eligendi adipisci at ducimus tenetur!</p>
+          </div>
+        </div>
+        <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border">
+          <div class="collapse-title text-md font-md font-bold">5. Do you offer certificates for completed courses?</div>
+          <div class="collapse-content text-sm">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo saepe dolorem cumque a consequuntur! Voluptates suscipit molestias architecto sapiente dicta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-20">
+    <hr class="border-1 border-orange-200">
+    <div class="mx-10 flex justify-between mt-10 mb-10">
+      <!-- leftside -->
+      <div class="flex flex-col gap-1">
+        <div class="flex items-center">
+          <h1 class="font-bold text-2xl">English</h1>
+          <img src="assets/logo.png" alt="">
+          <h1 class="font-bold text-xl">জানালা</h1>
+        </div>
+        <div class="mt-2">
+          <p>ইংরেজি শিখুন সহজে</p>
+        </div>
+        <div>
+          <p class="text-sm">Providing ED-Tech Applications since 2025</p>
+        </div>
+      </div>
+      <!-- rightside -->
+      <div class="flex flex-col gap-2">
+        <h4>FOLLOW US</h4>
+        <div class="flex gap-2">
+          <img src="assets/fb-thumb.png" alt="">
+          <img src="assets/youtube-thumb.png" alt="">
+          <img src="assets/instagram-thumb.png" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
