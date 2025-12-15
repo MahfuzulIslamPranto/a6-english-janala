@@ -35,7 +35,7 @@
 
 <body class="">
   <!-- navbar -->
-  <nav class="pt-5 border-b border-gray-300 pb-5 bg-slate-100">
+  <nav id="nav_bar" class="pt-5 border-b border-gray-300 pb-5 bg-slate-100 hidden">
     <section class="flex justify-between mx-10">
       <!-- logo leftside -->
       <div class="flex items-center">
@@ -55,21 +55,21 @@
         </div>
         <div class="btn border-btnBackground bg-white font-bold text-btnBackground rounded-sm">
           <img class="" src="assets/fa-arrow-right-from-bracket.png" alt="">
-          <h1>Logout</h1>
+          <h1 id="logout">Logout</h1>
         </div>
       </div>
     </section>
   </nav>
   <!-- banner -->
-  <header class="mx-10 hidden">
-    <section class="flex items-center justify-center gap-20 ">
+  <header class="mx-10">
+    <section id="main_banner" class="flex items-center justify-center gap-20 hidden">
       <!-- leftside -->
        <div class="w-2/3">
           <h1 class="text-4xl font-bold mb-2"><span class="text-textColor">English</span> is Easy!!</h1>
           <h3 class="font-bold text-slate-500 mb-6">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</h3>
-          <input type="text" placeholder="Enter Your Name" class="input input-bordered w-full max-w-xs rounded-sm mb-3" /><br>
-          <input type="password" placeholder="Password" class="input input-bordered w-full max-w-xs rounded-sm mb-4" /><br>
-          <button class="btn text-white bg-btnBackground hover:bg-slate-500">Get Started</button>
+          <input id="name_input" type="text" placeholder="Enter Your Name" class="input input-bordered w-full max-w-xs rounded-sm mb-3" /><br>
+          <input id="password_input" type="password" placeholder="Password:123456" class="input input-bordered w-full max-w-xs rounded-sm mb-4" /><br>
+          <button id="get_btn" class="btn text-white bg-btnBackground hover:bg-slate-500">Get Started</button>
        </div>
       <!-- rightside -->
        <div>
@@ -79,7 +79,7 @@
   </header>
   <!-- main -->
   <main>
-    <section class="">
+    <section id="button_container" class="hidden">
       <!-- Let's Learn Vocabularies section -->
       <h1 class="text-3xl font-bold text-center mt-10"><span class="text-textColor">Let's</span> Learn Vocabularies</h1>
       <!-- Lession buttons -->
@@ -100,7 +100,7 @@
         
       </div>
     </section>
-    <section id="lessonFound" class="bg-slate-50 mx-10 rounded-lg p-10 text-center mt-10 ">
+    <section id="lessonFound" class="bg-slate-50 mx-10 rounded-lg p-10 text-center mt-10 hidden">
       <!-- lession select -->
        <h1 class="text-3xl"><span class="text-sm text-gray-500">আপনি এখনো কোন Lesson Select করেন নি</span><br><span class="text-2xl">একটি</span> Lesson Select <span class="text-2xl">করুন।</span></h1>
     </section>
@@ -110,7 +110,7 @@
        <h1 class="text-3xl"><span class="text-sm text-gray-500">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</span><br><span class="text-2xl">নেক্সট</span> Lesson <span class="text-2xl">এ যান</span></h1>
     </section>
     <!-- ask questions -->
-    <section id="questions" class="mb-10">
+    <section id="questions" class="mb-10 hidden">
       <h1 class="text-center mt-14 font-bold text-3xl mb-10"><span class="text-textColor">Frequently</span> Asked Questions</h1>
       <div class="mx-10 flex flex-col gap-4">
         <div tabindex="0" class="collapse collapse-plus border-base-300 bg-base-200 border">
@@ -146,7 +146,7 @@
       </div>
     </section>
   </main>
-  <footer class="mt-20">
+  <footer id="foooter" class="mt-20">
     <hr class="border-1 border-orange-200">
     <div class="mx-10 flex justify-between mt-10 mb-10">
       <!-- leftside -->

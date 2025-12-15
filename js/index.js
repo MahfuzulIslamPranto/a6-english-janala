@@ -1,4 +1,28 @@
-// FAQ
+main_banner.classList.remove('hidden');
+//main banner
+document.getElementById('get_btn').addEventListener('click',function (){
+    const nm = document.getElementById('name_input');
+    const pw = document.getElementById('password_input');
+    const name = nm.value;
+    const password = pw.value;
+    if(!name){
+        alert("Please enter a user name!");
+    }
+    if(password==='123456'){
+        button_container.classList.remove("hidden");
+        lessonFound.classList.remove('hidden');
+        nav_bar.classList.remove("hidden");
+        main_banner.classList.add('hidden');
+        questions.classList.remove("hidden");
+        alert("Success!")
+    }
+    else{
+        alert("Please enter correct password!");
+    }
+})
+
+
+// nav_bar : FAQ, LogOut
 function faq(){
     const qs = document.getElementById('questions');
     //qs.classList.add("");
@@ -6,11 +30,23 @@ function faq(){
         behavior: 'smooth'
     })
 }
+document.getElementById('logout').addEventListener('click',function(){
+    main_banner.classList.remove('hidden');
+    lessonFound.classList.add('hidden');
+    nav_bar.classList.add("hidden");
+    button_container.classList.add("hidden");
+    questions.classList.add("hidden");
+    noLessonFound.classList.add("hidden")
+})
+
 // Button Details
 function details(id) {
     fetch(`https://openapi.programming-hero.com/api/word/${id}`)
         .then((response) => response.json())
         .then((data) => displayDetails(data.data))
+}
+function beep(){
+    alert("Completed");
 }
 function displayDetails(data) {
     const lessonBtnContainer = document.getElementById('lession-words-modal-container');
@@ -26,7 +62,7 @@ function displayDetails(data) {
             <p class="">${data.sentence}</p>
             <p class="pt-4 text-sm font-bold mb-1">সমার্থক শব্দ গুলো</p>
             <p>${data.synonyms}</p>
-            <button onclick="document.getElementById('my_modal_2').close()" class="btn bg-btnBackground text-white mt-4 text-sm">Complete Learning</button>
+            <button onclick="document.getElementById('my_modal_2').close(); beep();" class="btn bg-btnBackground text-white mt-4 text-sm">Complete Learning</button>
         </div>
         </dialog>
     `;
@@ -102,6 +138,7 @@ function displayButtons(data) {
         lessonBtnContainer.append(createDiv)
     }
 }
+//for active lesson button clicked -> Color changed and selected showed
 function handleLessonClick(clicked,lesson){
     const allBtn = document.querySelectorAll('.lesson_btn');
     allBtn.forEach(btn => btn.classList.remove('active'));
