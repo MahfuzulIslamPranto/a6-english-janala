@@ -1,3 +1,11 @@
+// FAQ
+function faq(){
+    const qs = document.getElementById('questions');
+    //qs.classList.add("");
+    qs.scrollIntoView({
+        behavior: 'smooth'
+    })
+}
 // Button Details
 function details(id) {
     fetch(`https://openapi.programming-hero.com/api/word/${id}`)
@@ -16,7 +24,7 @@ function displayDetails(data) {
             <p class="">${data.meaning}</p>
             <p class="pt-4 text-sm font-bold">Example</p>
             <p class="">${data.sentence}</p>
-            <p class="pt-4 text-sm font bold mb-1">সমার্থক শব্দ গুলো</p>
+            <p class="pt-4 text-sm font-bold mb-1">সমার্থক শব্দ গুলো</p>
             <p>${data.synonyms}</p>
             <button onclick="document.getElementById('my_modal_2').close()" class="btn bg-btnBackground text-white mt-4 text-sm">Complete Learning</button>
         </div>
