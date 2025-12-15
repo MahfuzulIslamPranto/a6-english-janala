@@ -8,9 +8,11 @@ document.getElementById('get_btn').addEventListener('click',function (){
     const name = nm.value;
     const password = pw.value;
     if(!name){
-        alert("Please enter a user name!");
+        alert("Please enter user name!");
+    }else if(!password){
+        alert("Please enter password!");
     }
-    if(password==='123456'){
+    else if(password==='123456' && name){
         button_container.classList.remove("hidden");
         lessonFound.classList.remove('hidden');
         nav_bar.classList.remove("hidden");
