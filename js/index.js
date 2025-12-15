@@ -93,13 +93,20 @@ function loadButtons() {
 // display Lesson Buttons
 function displayButtons(data) {
     const lessonBtnContainer = document.getElementById('lession-btn-container');
+    lessonBtnContainer.innerHTML="";
     for (let level of data) {
         const createDiv = document.createElement('div');
         createDiv.innerHTML = `
-         <button onclick="displayWordsByLessonButton(${level.level_no})" class="flex btn btn-sm border-btnBackground text-btnBackground bg-white rounded-sm hover:bg-btnBackground hover:text-white"><img src="assets/fa-book-open.png" alt="">Lesson-${level.level_no}</button>
+         <button onclick="handleLessonClick(this,${level.level_no})" class="lesson_btn flex btn btn-sm border-btnBackground text-btnBackground bg-white rounded-sm hover:bg-btnBackground hover:text-white"><img src="assets/fa-book-open.png" alt="">Lesson-${level.level_no}</button>
          `;
         lessonBtnContainer.append(createDiv)
     }
+}
+function handleLessonClick(clicked,lesson){
+    const allBtn = document.querySelectorAll('.lesson_btn');
+    allBtn.forEach(btn => btn.classList.remove('active'));
+    clicked.classList.add('active');
+    displayWordsByLessonButton(lesson);
 }
 // for showing all words at a time
 
