@@ -55,6 +55,7 @@ function loadAllLessonButtons(data) {
         lessonFound.classList.add("hidden");
         const lessonBtnContainer = document.getElementById('lession-words-container');
         lessonBtnContainer.innerHTML = "";
+        alert("No Word Found!")
         return;
     }
     else {
