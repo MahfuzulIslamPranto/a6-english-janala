@@ -1,5 +1,7 @@
-main_banner.classList.remove('hidden');
+//Loading
+const loader = document.getElementById('loader');
 //main banner
+main_banner.classList.remove('hidden');
 document.getElementById('get_btn').addEventListener('click',function (){
     const nm = document.getElementById('name_input');
     const pw = document.getElementById('password_input');
@@ -20,8 +22,6 @@ document.getElementById('get_btn').addEventListener('click',function (){
         alert("Please enter correct password!");
     }
 })
-
-
 // nav_bar : FAQ, LogOut
 function faq(){
     const qs = document.getElementById('questions');
@@ -38,7 +38,6 @@ document.getElementById('logout').addEventListener('click',function(){
     questions.classList.add("hidden");
     noLessonFound.classList.add("hidden")
 })
-
 // Button Details
 function details(id) {
     fetch(`https://openapi.programming-hero.com/api/word/${id}`)
@@ -50,7 +49,6 @@ function beep(){
 }
 function displayDetails(data) {
     const lessonBtnContainer = document.getElementById('lession-words-modal-container');
-    
     lessonBtnContainer.innerHTML = `
         <!-- Open the modal using ID.showModal() method -->
         <dialog id="my_modal_2" class="modal">
@@ -70,10 +68,13 @@ function displayDetails(data) {
 }
 //display words according to lesson button press
 function displayWordsByLessonButton(id) {
+    loader.classList.remove("hidden");
     const url = `https://openapi.programming-hero.com/api/level/${id}`;
     fetch(url)
         .then((response) => response.json())
-        .then((d) => loadAllLessonButtons(d.data))
+        .then((d) => {
+            loader.classList.add("hidden");
+            loadAllLessonButtons(d.data)})
 }
 //fetch all content -> words
 function loadWords() {
